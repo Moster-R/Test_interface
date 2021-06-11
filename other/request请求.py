@@ -8,15 +8,18 @@
 
 import requests
 import pprint
+import unittest
 
 
-def get_login():
-    url = "http://api.lemonban.com/futureloan/member/login"
-    headers = {"Content-Type": "application/json", "X-Lemonban-Media-Type": "lemonban.v2"}
-    data = {"mobile_phone": "18478048477", "pwd": "130658ct"}
+class TestRegister(unittest.TestCase):
 
-    response = requests.request(method='post', headers=headers, url=url, json=data)
-    return response.json()
+    def test_01(self):
+        url = "http://api.lemonban.com/futureloan/member/login"
+        headers = {"Content-Type": "application/json", "X-Lemonban-Media-Type": "lemonban.v2"}
+        data = {"mobile_phone": "18478048477", "pwd": "130658ct"}
+
+        response = requests.request(method='post', headers=headers, url=url, json=data)
+        response.json().get('msg')
+        print(response)
 
 
-pprint.pprint(get_login())

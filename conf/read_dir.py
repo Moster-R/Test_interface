@@ -24,3 +24,4 @@ log_dir = os.path.join(root_dir, 'logs')
 
 # test_cases路径
 test_cases_dir = os.path.join(root_dir, 'testcases')
+

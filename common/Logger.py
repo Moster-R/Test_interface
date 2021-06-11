@@ -76,12 +76,11 @@ class Log(object):
         self.__close_handler(stream_handler, file_handler)
         return self.__logger
 
-
-if __name__ == '__main__':
-    log = Log(__name__, 'file.log')
-    logger = log.Logger
-    logger.debug('I am a debug message')
-    logger.info('I am a info message')
-    logger.warning('I am a warning message')
-    logger.error('I am a error message')
-    logger.critical('I am a critical message')
+# if __name__ == '__main__':
+#     log = Log(__name__, 'file.log')
+#     logger = log.Logger
+#     logger.debug('I am a debug message')
+#     logger.info('I am a info message')
+#     logger.warning('I am a warning message')
+#     logger.error('I am a error message')
+#     logger.critical('I am a critical message')

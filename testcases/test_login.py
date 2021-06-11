@@ -8,7 +8,6 @@
 import unittest
 from common.ExclHandler import ExclHandler
 from unittestreport import ddt, list_data
-import os
 from login import login
 from common.Logger import Log
 from conf import read_dir
